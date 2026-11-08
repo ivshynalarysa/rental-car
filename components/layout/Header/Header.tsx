@@ -4,8 +4,8 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header className={'container ${styles.header}'}>
-      
+    <header className={styles.header}>
+     
         <Link
           className={styles.logo}
           href="/"
@@ -14,7 +14,7 @@ export default function Header() {
         >
           <span className={styles.logoIcon} aria-hidden="true">
             <svg width="102" height="16">
-              <use href="/public/sprite.svg#Logo" />
+              <use href="/sprite.svg#icon-Logo" />
             </svg>
           </span>
         </Link>
