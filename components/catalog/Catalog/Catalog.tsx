@@ -1,9 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import useCars from "../../../hooks/useCars";
 import CatalogList from "./CatalogList";
+import CatalogFilters from "../CatalogFilters/CatalogFilters";
 
 export default function Catalog() {
+
+    const [brand, setBrand] = useState(""); 
+    const [price, setPrice] = useState<number | undefined>(undefined);
+    const [minMileage, setMinMileage] = useState<number | undefined>(undefined);
+    const [maxMileage, setMaxMileage] = useState<number | undefined>(undefined);
   const {
     data,
     isLoading,
@@ -12,7 +19,12 @@ export default function Catalog() {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-  } = useCars();
+  } = useCars({
+      brand: brand || undefined,
+      price: price || undefined,
+      minMileage: minMileage || undefined,
+      maxMileage: maxMileage || undefined
+  });
 
   if (isLoading) {
     return <p>Loading cars...</p>;
@@ -25,7 +37,14 @@ export default function Catalog() {
   const cars = data?.pages.flatMap((page) => page.cars) ?? [];
 
   return (
-    <section>
+      <section>
+          <CatalogFilters
+              onBrandChange={setBrand}
+              onPriceChange={setPrice}
+              onMinMileageChange={setMinMileage}
+              onMaxMileageChange={setMaxMileage}
+          />
+
       <CatalogList cars={cars} />
 
       {hasNextPage && (

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import type { Car } from "../../../types/car"
 import styles from "./CarCard.module.css";
@@ -31,7 +32,16 @@ export default function CarCard({ car }: CarCardProps) {
         <p className={styles.description}>
                   {car.location.city}, {car.location.country}
         </p>
-      </div>
+          </div>
+      <Link
+         href={`/catalog/${car.id}`}
+         target="_blank"
+         rel="noopener noreferrer"
+      >
+        Read more
+      </Link>
+
+          
     </article>
   );
 }

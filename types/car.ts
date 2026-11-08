@@ -43,7 +43,7 @@ export interface CarFilters {
 export interface BookingData {
   name: string;
   email: string;
-  comment?: string;
+  comment: string;
 }
 
 export interface BookingResponse {

@@ -10,10 +10,10 @@ import type {
 
 export interface GetCarsParams {
   brand?: string;
-  rentalPrice?: number;
+  price?: number;
   minMileage?: number;
   maxMileage?: number;
-  limit?: number;
+  perPage?: number;
   page?: number;
 }
 
@@ -46,7 +46,7 @@ export const createBooking = async (
   bookingData: BookingData
 ): Promise<BookingResponse> => {
   const { data } = await api.post<BookingResponse>(
-    `/cars/${carId}/booking`,
+    `/cars/${carId}/booking-requests`,
     bookingData
   );
 
