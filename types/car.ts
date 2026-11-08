@@ -49,3 +49,4 @@ export interface BookingData {
 export interface BookingResponse {
   message: string;
 }
+

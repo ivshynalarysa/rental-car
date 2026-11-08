@@ -5,7 +5,7 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { getCars } from "../lib/cars";
 import type { GetCarsParams } from "../lib/cars";
 
-const LIMIT = 12;
+
 
 export default function useCars(filters: Omit<GetCarsParams, "page" | "limit"> = {}) {
   return useInfiniteQuery({
@@ -15,7 +15,7 @@ export default function useCars(filters: Omit<GetCarsParams, "page" | "limit"> =
       getCars({
         ...filters,
         page: pageParam,
-        limit: LIMIT,
+       
       }),
 
     initialPageParam: 1,
