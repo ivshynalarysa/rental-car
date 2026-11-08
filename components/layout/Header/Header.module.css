@@ -16,7 +16,7 @@
 
 
 @media (min-width: 768px) {
-    .header {
+    .h {
         width: min(calc(100% - 48px), 1200px);
         
     }
@@ -27,7 +27,7 @@
 }
 
 @media (min-width: 1440px) {
-    .header {
+    .h {
         width: min(calc(100% - 48px), 1200px);
         
     }
