@@ -15,31 +15,36 @@ export default function CarCard({ car }: CarCardProps) {
           src={car.img}
           alt={`${car.brand} ${car.model}`}
           fill
-          sizes="(max-width: 768px) 100vw, 25vw"
+          sizes= "244px"
           className={styles.image}
         />
       </div>
 
       <div className={styles.info}>
         <div className={styles.titleRow}>
-          <h3 className={styles.title}>
+          <h2 className={styles.title}>
             {car.brand} <span>{car.model}</span>, {car.year}
-          </h3>
+          </h2>
 
           <p className={styles.price}>${car.rentalPrice}</p>
         </div>
 
-        <p className={styles.description}>
-                  {car.location.city}, {car.location.country}
-        </p>
+         <ul className={styles.description}>
+        <li>{car.location.city}</li>
+        <li>{car.location.country}</li>
+        <li>{car.rentalCompany}</li>
+        <li>{car.type}</li>
+        <li>{car.mileage} km</li>
+      </ul>
           </div>
-      <Link
+    <Link
+         className={styles.button}     
          href={`/catalog/${car.id}`}
          target="_blank"
          rel="noopener noreferrer"
       >
         Read more
-      </Link>
+    </Link>
 
           
     </article>

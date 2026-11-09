@@ -4,7 +4,7 @@ import { useState } from "react";
 import useCars from "../../../hooks/useCars";
 import CatalogList from "./CatalogList";
 import CatalogFilters from "../CatalogFilters/CatalogFilters";
-
+import styles from "./Catalog.module.css"
 export default function Catalog() {
 
     const [brand, setBrand] = useState(""); 
@@ -37,7 +37,7 @@ export default function Catalog() {
   const cars = data?.pages.flatMap((page) => page.cars) ?? [];
 
   return (
-      <section>
+      <section className={ styles.catalog}>
           <CatalogFilters
               onBrandChange={setBrand}
               onPriceChange={setPrice}
@@ -48,11 +48,10 @@ export default function Catalog() {
       <CatalogList cars={cars} />
 
       {hasNextPage && (
-        <button
-          type="button"
-          onClick={() => fetchNextPage()}
-          disabled={isFetchingNextPage}
-        >
+              <button
+                  className={styles.loadMore}
+                  type="button"
+                  onClick={() => fetchNextPage()} disabled={isFetchingNextPage}>
           {isFetchingNextPage ? "Loading..." : "Load More"}
         </button>
       )}

@@ -55,6 +55,11 @@ textarea {
   font: inherit;
 }
 
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
 button {
   cursor: pointer;
 }

@@ -10,14 +10,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    
+    padding: 0 16px;
+}
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 
-
 @media (min-width: 768px) {
-    .h {
-        width: min(calc(100% - 48px), 1200px);
+    .header {
+        padding: 0 32px;
         
     }
 
@@ -27,8 +31,8 @@
 }
 
 @media (min-width: 1440px) {
-    .h {
-        width: min(calc(100% - 48px), 1200px);
+    .header {
+        padding: 0 120px;
         
     }
 }

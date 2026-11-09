@@ -41,11 +41,13 @@ export default function BookingForm({ carId }: BookingFormProps) {
       <form
           className={styles.form}
           onSubmit={handleSubmit(onSubmit)}>
-          <h2 className={styles.title}>Book your car now</h2>
-          <p className={styles.subtitle}>Stay connected! We are always ready to help you.</p>
+          <h2 className={styles.title}>Book your car now <br/>
+          <span className={styles.subtitle}>Stay connected! We are always ready to help you.</span>
+          </h2>
 
+          
           <input
-        className={styles.input}
+              className={`${styles.input} ${errors.name ? styles.inputError : ""}`}
         type="text"
         placeholder="Name*"
         {...register("name")}
@@ -56,7 +58,7 @@ export default function BookingForm({ carId }: BookingFormProps) {
             )}
 
       <input
-        className={styles.input}
+              className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
         type="email"
         placeholder="Email*"
         {...register("email")}
@@ -65,7 +67,7 @@ export default function BookingForm({ carId }: BookingFormProps) {
           {errors.email && <p className={styles.error}>{errors.email.message}</p>}
 
           <textarea
-        className={styles.textarea}      
+              className={`${styles.textarea} ${errors.comment ? styles.inputError : ""}`}      
         placeholder="Comment"
         {...register("comment")}
           />
