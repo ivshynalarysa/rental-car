@@ -1,15 +1,25 @@
 .catalog {
     padding: 84px 120px;
+    
+}
+.catalogContent {
+    position: relative;
+  
+    
 }
 
+.loadMoreWrapper {
+display: flex;
+justify-content: center;
+width: 100%;
+margin-top: 48px;
+}
 .loadMore {
     border: 1px solid #00aad4;
     border-radius: 12px;
     padding: 12px 38px;
     width: 156px;
     height: 44px;
-    justify-content: center;
-    margin: 48px auto 0;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;

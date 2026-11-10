@@ -103,7 +103,7 @@ export default function BookingForm({ carId }: BookingFormProps) {
       </div>
       
       <div className={styles.inputWrapper}
-           onMouseEnter={() => clearErrors("comment")}>
+          >
         
         <textarea
               className={`${styles.textarea} ${errors.comment ? styles.inputError : ""}`}      

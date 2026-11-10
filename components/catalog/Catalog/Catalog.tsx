@@ -5,7 +5,7 @@ import useCars from "../../../hooks/useCars";
 import CatalogList from "./CatalogList";
 import CatalogFilters from "../CatalogFilters/CatalogFilters";
 import styles from "./Catalog.module.css"
-import CatalogLoader from  "../../CatalogLoader/CatalogLoader";
+import CatalogLoader from  "./CatalogLoader/CatalogLoader";
 
 
 export default function Catalog() {
@@ -63,9 +63,7 @@ export default function Catalog() {
     fetchNextPage();
   }
 
-  if (isLoading) {
-    return <p>Loading cars...</p>;
-  }
+ 
 
   if (isError) {
     return <p>Error: {error.message}</p>;
@@ -82,23 +80,36 @@ export default function Catalog() {
               onMaxMileageChange={setMaxMileage}
           />
 
-      <CatalogList
-        cars={cars}
-        firstNewCarRef={firstNewCarRef}
-        firstNewCarIndex={cars.length - (data?.pages.at(-1)?.cars.length ?? 0)}
-      />
+     
 
+      <div className={styles.catalogContent}>
+        {isLoading ? (
+          <CatalogLoader />
+        ) : (
+            
+          <>
+            <CatalogList
+              cars={cars}
+              firstNewCarRef={firstNewCarRef}
+              firstNewCarIndex={cars.length - (data?.pages.at(-1)?.cars.length ?? 0)}
+            />
+              {hasNextPage && (
+                <div className={styles.loadMoreWrapper}>
+             <button
+                className={styles.loadMore}
+                type="button"
+                onClick={handleLoadMore}
+                disabled={isFetchingNextPage}>
+                {isFetchingNextPage ? <CatalogLoader /> : "Load More"}
+              </button>
+                </div>
+             
+            )}
+          </>
+        )}
       
-
-      {hasNextPage && (
-              <button
-                  className={styles.loadMore}
-                  type="button"
-          onClick={handleLoadMore}
-          disabled={isFetchingNextPage}>
-          {isFetchingNextPage ? "Loading..." : "Load More"}
-        </button>
-      )}
+    </div>
+     
     </section>
   );
 }
