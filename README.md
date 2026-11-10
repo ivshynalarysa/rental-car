@@ -79,7 +79,7 @@ http://localhost:3000
 
 ## Author
 
-**Author:** [Your Name]
+**Author:** Larysa Ivshyna
 
 **Project:** Rental Car
 
