@@ -9,7 +9,7 @@
     width: 156px;
     height: 44px;
     justify-content: center;
-    margin: 48px auto;
+    margin: 48px auto 0;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
@@ -17,10 +17,11 @@
     color: var(--main);
     background-color: inherit;
     transition:
-            
+            background-color 180ms ease,
             border-color 180ms ease;
 }
 
 .loadMore:hover {
     border-color:  #0095ba;
+    background-color: #00aad4;
 }

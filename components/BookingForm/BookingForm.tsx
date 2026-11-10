@@ -13,14 +13,25 @@ interface BookingFormProps {
   carId: string;
 }
 
+function ErrorIcon() {
+  return (
+    <svg className={styles.errorIcon}>
+      <use href="/sprite.svg#icon-exclamation" />
+    </svg>
+  )
+}
+
 export default function BookingForm({ carId }: BookingFormProps) {
   const {
   register,
   handleSubmit,
   reset,
+  clearErrors,
   formState: { errors },
 } = useForm<BookingData>({
   resolver: yupResolver(bookingSchema),
+  mode: "onChange",
+  reValidateMode: "onChange",
 });
 
   const { mutate, isPending } = useBooking(carId);
@@ -45,8 +56,9 @@ export default function BookingForm({ carId }: BookingFormProps) {
           <span className={styles.subtitle}>Stay connected! We are always ready to help you.</span>
           </h2>
 
-          
-          <input
+      <div className={styles.inputWrapper}
+           onMouseEnter={() => clearErrors("name")}>
+            <input
               className={`${styles.input} ${errors.name ? styles.inputError : ""}`}
         type="text"
         placeholder="Name*"
@@ -54,27 +66,60 @@ export default function BookingForm({ carId }: BookingFormProps) {
           />
           
           {errors.name &&
-              (<p className={styles.error}>{errors.name.message}</p>
+        (
+        <>
+            <ErrorIcon />
+            <p className={styles.labelError}>Name*</p>
+          <p className={styles.error}>{errors.name.message}</p>
+          </>
             )}
 
-      <input
+
+         </div>
+      
+      <div className={styles.inputWrapper}
+           onMouseEnter={() => clearErrors("email")}>
+        <input
               className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
         type="email"
         placeholder="Email*"
         {...register("email")}
           />
           
-          {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+      {errors.email &&
+        (
+        <>
+            <ErrorIcon />
+            <p className={styles.labelError}>Email*</p>
+        <p className={styles.error}>{errors.email.message}</p>
+        
 
-          <textarea
+       </>
+          )
+        
+      
+      }
+
+      </div>
+      
+      <div className={styles.inputWrapper}
+           onMouseEnter={() => clearErrors("comment")}>
+        
+        <textarea
               className={`${styles.textarea} ${errors.comment ? styles.inputError : ""}`}      
         placeholder="Comment"
         {...register("comment")}
           />
           
-          {errors.comment && (
-  <p className={styles.error}>{errors.comment.message}</p>
+        {errors.comment && (
+          <>
+          <ErrorIcon /> 
+      <p className={styles.error}>{errors.comment.message}</p>
+          
+          </>
 )}
+</div>
+  
 
           <button className={styles.submitButton}
               type="submit" disabled={isPending}>

@@ -55,11 +55,11 @@
 
 .textarea {
     min-height: 100px;
-    resize: vertical;
+    resize: none;
 }
 
 .error {
-    margin: -18px 0 0;
+    margin: 2px 0 0;
     color: #e53935;
     font-size: 12px;
 }
@@ -70,8 +70,34 @@
     
    
 }
+.inputWrapper {
+    position: relative;
+}
+.errorIcon {
+   position: absolute;
+    fill: #e53935;
+    width: 20px;
+    height: 20px;
+    top: 38%;
+    right: 3%;
+    transform: translateY(-50%);
 
+}
 
+.labelError {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 133%;
+    color: #e53935;
+    border-radius: 8px;
+    padding: 0 8px;
+    width: 54px;
+    height: 16px;
+    background-color: #ffe1e1;
+    top: -12%;
+    left: 3%;
+}
 .submitButton {
     border-radius: 12px;
     padding: 12px 99px;
@@ -84,7 +110,9 @@
     line-height: 125%;
     border: none;
     transition: background-color 0.2s ease;
-    margin-top: 8px;  
+    margin-top: 8px; 
+    transition:
+            background-color 180ms ease,
 }
 
 .submitButton:hover {

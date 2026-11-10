@@ -59,6 +59,7 @@ export default function CatalogFilters({
       <div className={styles.filterGroup}>
         <label htmlFor="brand">Car brand</label>
         <select
+          className={styles.select}
           id="brand"
           value={brand}
           onChange={(e) => setBrand(e.target.value)}
@@ -73,7 +74,7 @@ export default function CatalogFilters({
       </div>
 
       <div className={styles.filterGroup}>
-        <label htmlFor="price">Price / hour</label>
+        <label htmlFor="price">Price / 1 hour</label>
         <select
           id="price"
           value={price}
