@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rental Car 🚗
 
-## Getting Started
+## About the Project
 
-First, run the development server:
+**Rental Car** is a web application for renting cars. It allows users to browse available vehicles, view detailed information about each car, and submit online booking requests.
+
+The project is designed to make finding and booking rental cars simple and convenient.
+
+## Features
+
+- Browse a catalog of available cars.
+- View detailed information about each vehicle.
+- Explore car specifications and features.
+- Submit car booking requests online.
+- Booking form with fields for name, email, and comment.
+- Form validation using React Hook Form and Yup.
+- Display validation errors when users enter incorrect information.
+- Show success and error notifications when submitting a booking request.
+- Responsive and user-friendly interface.
+
+## Technologies Used
+
+The project is built using the following technologies:
+
+- **Next.js** – React framework for building web applications.
+- **React** – JavaScript library for building user interfaces.
+- **TypeScript** – Programming language with static typing.
+- **CSS Modules** – Component-level styling.
+- **React Hook Form** – Form management and handling.
+- **Yup** – Form validation.
+- **React Hot Toast** – Displaying notifications.
+
+## Installation and Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ivshynalarysa/rental-car.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd rental-car
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open the application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open your browser and navigate to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+## How to Use
 
-To learn more about Next.js, take a look at the following resources:
+1. Open the Rental Car web application.
+2. Browse the available cars.
+3. Select a car you are interested in.
+4. Open the car details page to view more information.
+5. Fill out the booking form with your name, email address, and comment.
+6. Make sure all required information is correct.
+7. Click the submit button to send your booking request.
+8. Receive a notification confirming the result of your request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Author:** Larysa Ivshyna
 
-## Deploy on Vercel
+**Project:** Rental Car
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
