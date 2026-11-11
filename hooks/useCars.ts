@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useInfiniteQuery } from "@tanstack/react-query";
@@ -7,7 +6,9 @@ import type { GetCarsParams } from "../lib/cars";
 
 const PER_PAGE = 12;
 
-export default function useCars(filters: Omit<GetCarsParams, "page" | "limit"> = {}) {
+export default function useCars(
+  filters: Omit<GetCarsParams, "page" | "limit"> = {},
+) {
   return useInfiniteQuery({
     queryKey: ["cars", filters],
 

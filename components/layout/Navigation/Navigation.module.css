@@ -1,19 +1,19 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .navLink {
-    color: #121417;
-    
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: var(--main);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.navLink:hover {
-    color: #00aad4;
+.navLink:hover,
+.active {
+  color: #00aad4;
 }

@@ -1,4 +1,3 @@
-
 export interface CarLocation {
   country: string;
   city: string;
@@ -30,7 +29,6 @@ export interface CarsResponse {
   totalPages: number;
 }
 
-
 export interface CarFilters {
   brands: string[];
   price: {
@@ -38,7 +36,6 @@ export interface CarFilters {
     max: number;
   };
 }
-
 
 export interface BookingData {
   name: string;
@@ -49,4 +46,3 @@ export interface BookingData {
 export interface BookingResponse {
   message: string;
 }
-

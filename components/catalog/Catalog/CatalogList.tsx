@@ -12,14 +12,16 @@ interface CatalogListProps {
 export default function CatalogList({
   cars,
   firstNewCarRef,
-  firstNewCarIndex}: CatalogListProps) {
+  firstNewCarIndex,
+}: CatalogListProps) {
   return (
     <ul className={styles.list}>
-      {cars.map((car, index ) => (
+      {cars.map((car, index) => (
         <li
           key={car.id}
           className={styles.item}
-          ref={index === firstNewCarIndex ? firstNewCarRef : undefined}>
+          ref={index === firstNewCarIndex ? firstNewCarRef : undefined}
+        >
           <CarCard car={car} />
         </li>
       ))}

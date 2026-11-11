@@ -1,0 +1,40 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.imageNotFound {
+  width: 400px;
+  height: 360px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 133%;
+}
+
+.description {
+  margin-top: 16px;
+  line-height: 125%;
+}
+
+.resetButton {
+  padding: 12px 30px;
+  border: 1px solid #00aad4;
+  border-radius: 12px;
+  background-color: transparent;
+  font-weight: 600;
+  margin-top: 40px;
+  transition: background-color 200ms ease;
+}
+
+.resetButton:hover {
+  background-color:  #0095ba;
+  color: var(--white);
+}

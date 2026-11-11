@@ -6,7 +6,6 @@ import type { BookingData } from "../types/car";
 
 export default function useBooking(carId: string) {
   return useMutation({
-    mutationFn: (bookingData: BookingData) =>
-      createBooking(carId, bookingData),
+    mutationFn: (bookingData: BookingData) => createBooking(carId, bookingData),
   });
 }

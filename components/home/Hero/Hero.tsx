@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from './Hero.module.css';
+import Link from "next/link";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
@@ -10,7 +10,7 @@ export default function Hero() {
           Reliable and budget-friendly rentals for any journey
         </p>
 
-          <Link className={styles.button} href="/catalog" prefetch={false}>
+        <Link className={styles.button} href="/catalog" prefetch={false}>
           View Catalog
         </Link>
       </div>

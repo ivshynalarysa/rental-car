@@ -1,37 +1,33 @@
 .catalog {
-    padding: 84px 120px;
-    
+  padding: 84px 120px;
 }
 .catalogContent {
-    position: relative;
-  
-    
+  position: relative;
 }
 
 .loadMoreWrapper {
-display: flex;
-justify-content: center;
-width: 100%;
-margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 48px;
 }
 .loadMore {
-    border: 1px solid #00aad4;
-    border-radius: 12px;
-    padding: 12px 38px;
-    width: 156px;
-    height: 44px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 125%;
-    color: var(--main);
-    background-color: inherit;
-    transition:
-            background-color 180ms ease,
-            border-color 180ms ease;
+  border: 1px solid #00aad4;
+  border-radius: 12px;
+  width: 156px;
+  height: 44px;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--main);
+  background-color: inherit;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+  color: 180ms ease;
 }
 
 .loadMore:hover {
-    border-color:  #0095ba;
-    background-color: #00aad4;
+  border-color: #0095ba;
+  background-color: #00aad4;
+  color: #fff;
 }

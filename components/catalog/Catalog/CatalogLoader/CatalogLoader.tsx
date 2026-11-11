@@ -10,7 +10,7 @@ export default function CatalogLoader() {
           <p className={styles.loadingTitle}>Loading cars...</p>
 
           <p className={styles.loadingText}>
-            Please wait while we fetch the best <br/> cars for you.
+            Please wait while we fetch the best <br /> cars for you.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Car } from "../../../types/car"
+import type { Car } from "../../../types/car";
 import styles from "./CarCard.module.css";
 
 interface CarCardProps {
@@ -15,7 +15,7 @@ export default function CarCard({ car }: CarCardProps) {
           src={car.img}
           alt={`${car.brand} ${car.model}`}
           fill
-          sizes= "244px"
+          sizes="244px"
           className={styles.image}
         />
       </div>
@@ -29,24 +29,22 @@ export default function CarCard({ car }: CarCardProps) {
           <p className={styles.price}>${car.rentalPrice}</p>
         </div>
 
-         <ul className={styles.description}>
-        <li>{car.location.city}</li>
-        <li>{car.location.country}</li>
-        <li>{car.rentalCompany}</li>
-        <li>{car.type}</li>
-        <li>{car.mileage} km</li>
-      </ul>
-          </div>
-    <Link
-         className={styles.button}     
-         href={`/catalog/${car.id}`}
-         target="_blank"
-         rel="noopener noreferrer"
+        <ul className={styles.description}>
+          <li>{car.location.city}</li>
+          <li>{car.location.country}</li>
+          <li>{car.rentalCompany}</li>
+          <li>{car.type}</li>
+          <li>{car.mileage} km</li>
+        </ul>
+      </div>
+      <Link
+        className={styles.button}
+        href={`/catalog/${car.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Read more
-    </Link>
-
-          
+      </Link>
     </article>
   );
 }

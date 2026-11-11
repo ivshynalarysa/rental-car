@@ -82,5 +82,3 @@ http://localhost:3000
 **Author:** Larysa Ivshyna
 
 **Project:** Rental Car
-
-
