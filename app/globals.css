@@ -83,10 +83,7 @@ a {
   text-decoration: none;
 }
 
-:focus-visible {
-  
-  outline-offset: 3px;
-}
+
 
 .container {
   width: 100%;

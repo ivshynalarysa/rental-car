@@ -119,6 +119,12 @@
   border-radius: 0 12px 12px 0;
 }
 
+.mileageInputs input:focus,
+.mileageInputs input:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
 .filterActions {
   display: flex;
   flex-direction: column;

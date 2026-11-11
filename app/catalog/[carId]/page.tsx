@@ -47,10 +47,12 @@ export default function CarDetailsPage() {
         <div className={styles.leftColumn}>
           <div className={styles.imageWrapper}>
             <Image
+              className={styles.carImage}
               src={car.img}
               alt={`${car.brand} ${car.model}`}
               width={640}
               height={480}
+              priority
             />
           </div>
 
