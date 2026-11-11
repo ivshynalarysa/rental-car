@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "RentalCar",
   description: "Find and rent your perfect car with RentalCar",
   applicationName: 'Rental Car',
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
