@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import useCarById from "../../../hooks/useCarById";
 import BookingForm from "../../../components/BookingForm/BookingForm";
+import CatalogLoader  from "../../../components/catalog/Catalog/CatalogLoader/CatalogLoader";
 import styles from "./card.module.css";
 
 const iconList: Record<string, string> = {
@@ -30,7 +31,7 @@ export default function CarDetailsPage() {
   const { data: car, isLoading, isError, error } = useCarById(params.carId);
 
   if (isLoading) {
-    return <p>Loading car details...</p>;
+    return <CatalogLoader />;
   }
 
   if (isError) {
