@@ -90,7 +90,7 @@ export default function CarDetailsPage() {
             </div>
 
             <div className={styles.infoSection}>
-              <h3 className={styles.infoSectionTitle}>Car Specifications</h3>
+              <h4 className={styles.infoSectionTitle}>Car Specifications</h4>
 
               <ul className={styles.list}>
                 <li>
@@ -117,7 +117,7 @@ export default function CarDetailsPage() {
             </div>
 
             <div className={styles.infoSection}>
-              <h3 className={styles.infoSectionTitle}>Features</h3>
+              <h5 className={styles.infoSectionTitle}>Features</h5>
 
               <ul className={styles.list}>
                 {car.features.map((feature, index) => (
